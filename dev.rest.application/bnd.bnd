@@ -1,0 +1,19 @@
+-buildpath: \
+	osgi.annotation;version=7.0.0,\
+	osgi.core;version=7.0.0,\
+	osgi.cmpn;version=7.0.0,\
+	org.apache.aries.javax.jax.rs-api;version=1.0.0,\
+	dev.persistence.api;version=latest,\
+	com.google.gson,\
+	org.apache.felix.http.servlet-api,\
+	org.apache.commons.fileupload
+
+-testpath: \
+	${junit},\
+	${mockito},\
+	${mockito-deps}
+
+javac.source: 1.8
+javac.target: 1.8
+
+Bundle-Version: 0.0.0.${tstamp}
