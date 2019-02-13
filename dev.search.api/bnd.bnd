@@ -8,3 +8,6 @@ javac.target: 1.8
 Export-Package: \
 	dev.search.filter,\
 	dev.search.index
+Bundle-Name: PonyTales E-Commerce Backend Filter API
+Bundle-Description: Describes an API to handle document indexing and filtering. Requests and \
+	Response can be intercepted.

@@ -1,10 +1,21 @@
-# Project Title
+# PonyTales E-Commerce Backend
 
-One Paragraph of project description goes here
+A simple yet generic ecommerce backend built on top of the OSGi specifications. It provides APIs
+as well as some implementations. For testing purposes a restful resources are included as well
+(based on the JAX-RS whiteboard specification).
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. To build the project simply do
+
+```
+gradle clean
+```
+in the projects root directory followed by a
+
+```
+gradle build
+```
 
 ### Prerequisites
 

@@ -31,3 +31,5 @@ Export-Package: \
 	dev.persistence.dto,\
 	dev.persistence.dao,\
 	org.osgi.dto
+Bundle-Name: PonyTales E-Commerce Backend JPA XA DAO Implementation
+Bundle-Description: Provides JPA XA implementations for DAO services specified in dev.persistence.dao

@@ -72,3 +72,6 @@ Require-Capability: \
                     osgi.contract;filter:="(&(osgi.contract=JavaJPA)(|(version=2)(version=2.1))(!(version>=2.2)))",\
                     osgi.service;filter:="(objectClass=org.osgi.service.jdbc.DataSourceFactory)";resolution:="optional";effective:="active", \
                     osgi.service;filter:="(objectClass=org.osgi.service.jpa.EntityManagerFactoryBuilder)";resolution:="optional";effective:="active"
+Bundle-Name: Apache Aries Transaction Control Service JPA XA
+Bundle-Description: Wrapped version of the corresponding original, but sparing org.osgi.cm exports, \
+	since it causes Apache Karaf 4.2.2 to crash.

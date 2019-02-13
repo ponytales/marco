@@ -17,3 +17,6 @@ Export-Package: \
 	dev.persistence.dao,\
 	dev.persistence.dto,\
 	org.osgi.dto
+Bundle-Name: PonyTales DAO API
+Bundle-Description: This bundle provides interfaces and constants for the PonyTales e-commerce \
+	backend.
