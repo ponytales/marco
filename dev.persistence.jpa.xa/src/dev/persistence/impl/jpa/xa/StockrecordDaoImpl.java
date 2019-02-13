@@ -12,6 +12,7 @@ import javax.persistence.criteria.CriteriaDelete;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
+import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ServiceScope;
@@ -40,6 +41,11 @@ public class StockrecordDaoImpl implements StockrecordDao {
 	private JPAEntityManagerProvider provider;
 	
 	private EntityManager em;
+	
+	@Activate
+	private void activate () {
+		em = provider.getResource(txControl);
+	}
 
 	@Override
 	public StockrecordDTO select(Long id) {
