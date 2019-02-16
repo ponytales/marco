@@ -145,10 +145,10 @@ public class CategoryDaoImpl implements CategoryDao {
 		try {
 			int count = txControl.required(() -> {
 				CriteriaBuilder builder = em.getCriteriaBuilder();
-				CriteriaDelete<CategoryEntity> query = builder.createCriteriaDelete(CategoryEntity.class);
-				Root<CategoryEntity> from = query.from(CategoryEntity.class);
-				query.where(builder.equal(from.get("id"), id));
-				return em.createQuery(query).executeUpdate();
+				CriteriaDelete<CategoryEntity> delete = builder.createCriteriaDelete(CategoryEntity.class);
+				Root<CategoryEntity> from = delete.from(CategoryEntity.class);
+				delete.where(builder.equal(from.get("id"), id));
+				return em.createQuery(delete).executeUpdate();
 			});
 			
 			if (count == 0) {
@@ -190,5 +190,4 @@ public class CategoryDaoImpl implements CategoryDao {
 			throw new DaoException(e);
 		}
 	}
-
 }
