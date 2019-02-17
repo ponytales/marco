@@ -1,0 +1,20 @@
+-buildpath: \
+	osgi.annotation;version=7.0.0,\
+	osgi.core;version=7.0.0,\
+	osgi.cmpn;version=7.0.0,\
+	dev.filter.api;version=latest,\
+	org.apache.servicemix.bundles:org.apache.servicemix.bundles.solr-solrj
+
+-testpath: \
+	${junit},\
+	${mockito},\
+	${mockito-deps}
+
+javac.source: 1.8
+javac.target: 1.8
+
+Bundle-Version: 0.0.0.${tstamp}
+Private-Package: dev.filter.solr.impl
+Export-Package: \
+	dev.search.index,\
+	dev.search.filter
