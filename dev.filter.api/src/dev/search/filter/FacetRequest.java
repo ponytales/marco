@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-public class FacetRequest extends FilterRequest {
+public class FacetRequest extends QueryRequest {
 	private Set<String> facets = new HashSet<>();
 
 	public Set<String> getFacets() {

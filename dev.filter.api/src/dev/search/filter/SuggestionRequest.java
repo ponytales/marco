@@ -1,6 +1,6 @@
 package dev.search.filter;
 
-public class SuggestionRequest {
+public class SuggestionRequest extends FilterRequest {
 	private String text;
 	
 	public String getText () {
