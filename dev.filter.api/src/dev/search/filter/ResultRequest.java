@@ -7,7 +7,7 @@ public class ResultRequest extends QueryRequest {
 	private Integer page = 1;
 	private Integer interval = 25;
 	private List<String> sortBy = null;
-	private Boolean order = null;
+	private Boolean order = false;
 	private List<String> fields = new ArrayList<>();
 	
 	public Integer getPage() {
@@ -35,11 +35,22 @@ public class ResultRequest extends QueryRequest {
 	}
 
 	public Boolean getOrder() {
+		if (order == null) {
+			order = false;
+		}
 		return order;
 	}
 
+	/**
+	 * Sets ordering of results. Default is false (descending).
+	 * @param order {@link Boolean} - TRUE = descending FALSE = ascending
+	 */
 	public void setOrder(Boolean order) {
-		this.order = order;
+		this.order = order == null ? false : order;
+	}
+	
+	public List<String> getFields () {
+		return fields;
 	}
 	
 	public void addField (String field) {

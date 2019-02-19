@@ -6,16 +6,16 @@ import java.util.Map;
 public class FacetResponse extends FilterResponse<FacetRequest> {
 	private Map<String,Map<String,Long>> facets;
 	
-	FacetResponse () {
+	public FacetResponse () {
 		
 	}
 
-	FacetResponse(FacetRequest request, Exception exception) {
+	public FacetResponse(FacetRequest request, Exception exception) {
 		super(request, exception);
 		// TODO Auto-generated constructor stub
 	}
 	
-	FacetResponse(FacetRequest request, Exception exception, Map<String,Map<String,Long>> facets) {
+	public FacetResponse(FacetRequest request, Exception exception, Map<String,Map<String,Long>> facets) {
 		this.facets = facets == null ? new HashMap<>() : facets;
 	}
 	

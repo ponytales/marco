@@ -1,5 +1,5 @@
 package dev.search.filter;
 
-public interface ResultRequestInterceptor extends Interceptor<ResultRequest>{
+public interface ResultRequestInterceptor extends RequestInterceptor<ResultRequest>{
 	
 }
