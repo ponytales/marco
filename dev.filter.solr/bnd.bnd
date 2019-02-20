@@ -18,3 +18,7 @@ Private-Package: dev.filter.solr.impl
 Export-Package: \
 	dev.search.index,\
 	dev.search.filter
+Bundle-Blueprint: blueprint.xml
+Include-Resource: resources/blueprint.xml
+Import-Package: org.apache.solr.client.solrj.impl, \
+	*

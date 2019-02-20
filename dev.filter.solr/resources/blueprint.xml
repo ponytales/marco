@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint
+	xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+	xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xsi:schemaLocation="
+ 		http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd
+ 		http://www.osgi.org/xmlns/blueprint/v1.0.0 https://osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd">
+	
+	<cm:property-placeholder persistent-id="dev.filter.solr.backend">
+	</cm:property-placeholder>
+	
+	<bean id="builder" class="org.apache.solr.client.solrj.impl.HttpSolrClient.Builder">
+		<argument value="${baseUrl}"></argument>
+	</bean>
+	
+	<bean id="client" factory-ref="builder" factory-method="build"></bean>
+	
+	<service interface="org.apache.solr.client.solrj.SolrClient" ref="client" activation="eager" ></service>
+</blueprint>
