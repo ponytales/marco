@@ -6,7 +6,8 @@
 	dev.persistence.api;version=latest,\
 	com.google.gson,\
 	org.apache.felix.http.servlet-api,\
-	org.apache.commons.fileupload
+	org.apache.commons.fileupload,\
+	dev.filter.api;version=latest
 
 -testpath: \
 	${junit},\
