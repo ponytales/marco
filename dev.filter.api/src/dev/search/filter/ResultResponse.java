@@ -22,7 +22,7 @@ public class ResultResponse extends FilterResponse<ResultRequest>{
 		this.results = results == null ? new ArrayList<>() : results;
 	}
 	
-	List<Map<String,Object>> getResults () {
+	public List<Map<String,Object>> getResults () {
 		return this.results;
 	}
 }
