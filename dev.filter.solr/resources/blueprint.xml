@@ -10,11 +10,11 @@
 	<cm:property-placeholder persistent-id="dev.filter.solr.backend">
 	</cm:property-placeholder>
 	
-	<bean id="builder" class="org.apache.solr.client.solrj.impl.HttpSolrClient.Builder">
+	<bean id="solrClientBuilder" class="org.apache.solr.client.solrj.impl.HttpSolrClient.Builder">
 		<argument value="${baseUrl}"></argument>
 	</bean>
 	
-	<bean id="client" factory-ref="builder" factory-method="build"></bean>
+	<bean id="solrClient" factory-ref="solrClientBuilder" factory-method="build"></bean>
 	
-	<service interface="org.apache.solr.client.solrj.SolrClient" ref="client" activation="eager" ></service>
+	<service interface="org.apache.solr.client.solrj.SolrClient" ref="solrClient"></service>
 </blueprint>

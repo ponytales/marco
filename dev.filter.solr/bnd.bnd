@@ -14,11 +14,12 @@ javac.source: 1.8
 javac.target: 1.8
 
 Bundle-Version: 0.0.0.${tstamp}
-Private-Package: dev.filter.solr.impl
+Bundle-Blueprint: 
+Include-Resource: OSGI-INF/blueprint/blueprint.xml=resources/blueprint.xml
 Export-Package: \
 	dev.search.index,\
 	dev.search.filter
-Bundle-Blueprint: 
-Include-Resource: OSGI-INF/blueprint/blueprint.xml=resources/blueprint.xml
-Import-Package: org.apache.solr.client.solrj.impl, \
+Private-Package: dev.filter.solr.impl
+Import-Package: \
+	org.apache.solr.client.solrj.impl,\
 	*
