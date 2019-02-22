@@ -27,6 +27,9 @@ public class ResultRequest extends QueryRequest {
 	}
 
 	public List<String> getSortBy() {
+		if (sortBy == null) {
+			sortBy = new ArrayList<>();
+		}
 		return sortBy;
 	}
 
