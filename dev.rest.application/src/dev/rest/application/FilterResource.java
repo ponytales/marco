@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.stream.Collectors;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -17,6 +18,7 @@ import org.osgi.service.jaxrs.whiteboard.propertytypes.JaxrsApplicationSelect;
 import org.osgi.service.jaxrs.whiteboard.propertytypes.JaxrsResource;
 
 import dev.persistence.dao.StockrecordDao;
+import dev.persistence.dto.StockrecordDTO;
 import dev.search.filter.FilterService;
 import dev.search.filter.ResultRequest;
 import dev.search.filter.ResultResponse;
@@ -69,14 +71,9 @@ public class FilterResource {
 		request.setParameters(new HashMap<>(paramCache.get(hashcode)));
 
 		ResultResponse response = filter.process(request);
-		response.getResults();
-		return jsonMsg("not implemented yet");
-	}
-	
-	@GET
-	@Path("hello")
-	public String hello () {
-		return jsonMsg("Hello, world!");
+		List<StockrecordDTO> dtos = response.getResults().stream().map(doc ->
+			stockrecordDao.select((Long) doc.get("id"))).collect(Collectors.toList());
+		return jsonMsg(dtos.toString());
 	}
 	
 	private String jsonMsg (String msg) {
