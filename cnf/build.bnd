@@ -1,3 +1,5 @@
+-include cnf/personal.bnd
+
 # Configure Repositories
 -plugin.1.R7.API: \
 	aQute.bnd.repository.maven.pom.provider.BndPomRepository; \
