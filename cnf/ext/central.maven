@@ -1,0 +1,5 @@
+# List repository contents using GAV coordinates
+org.osgi:org.osgi.core:6.0.0
+org.apache.aries.tx-control:tx-control-provider-jpa-xa:1.0.0
+com.google.code.gson:gson:2.8.5
+org.apache.servicemix.bundles:org.apache.servicemix.bundles.solr-solrj:7.6.0_1

@@ -1,6 +1,9 @@
 cnf/cache
 cnf/local
 cnf/release
+cnf/ext/*_local*.bnd
+cnf/build.bnd
+
 */.classpath
 */.project
 */.settings/

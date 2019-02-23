@@ -1,5 +1,3 @@
--include cnf/personal.bnd
-
 # Configure Repositories
 -plugin.1.R7.API: \
 	aQute.bnd.repository.maven.pom.provider.BndPomRepository; \
@@ -60,20 +58,3 @@
 		pretty = true; \
 		type = R5; \
 		local = ${build}/release
-
--releaserepo: Release
--baselinerepo: Release
-
-# Always use contracts
--contract: *
-
-# Set Git revision information in the manifests of built bundles
-#Git-Descriptor:           ${system-allow-fail;git describe --dirty --always}
-#Git-SHA:                  ${system-allow-fail;git rev-list -1 HEAD}
-
-# JUnit
-junit: org.apache.servicemix.bundles.junit; version=4.12
-mockito: org.mockito.mockito-core; version=2.13.0
-mockito-deps: org.objenesis; version=2.6.0,\
-  net.bytebuddy.byte-buddy; version=1.7.9,\
-  net.bytebuddy.byte-buddy-agent; version=1.7.9 
