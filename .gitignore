@@ -1,4 +1,6 @@
-
+cnf/cache
+cnf/local
+cnf/release
 */.classpath
 */.project
 */.settings/
@@ -22,5 +24,4 @@
 **/personal.bnd
 **/target/
 */*.jar
-*/cnf/
 */TEST-*.xml
