@@ -56,5 +56,4 @@
 	aQute.bnd.deployer.repository.LocalIndexedRepo; \
 		name = Release; \
 		pretty = true; \
-		type = R5; \
 		local = ${build}/release

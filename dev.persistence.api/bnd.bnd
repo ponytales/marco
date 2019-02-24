@@ -11,7 +11,7 @@
 javac.source: 1.8
 javac.target: 1.8
 
-Bundle-Version: 2.0.0.${tstamp}
+Bundle-Version: 1.0.0.${tstamp}
 
 Export-Package: \
 	dev.persistence.dao,\
