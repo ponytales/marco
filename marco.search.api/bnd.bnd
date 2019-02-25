@@ -1,0 +1,13 @@
+Bundle-Version: 1.0.0.${tstamp}
+
+-baseline: *
+-buildpath: osgi.annotation;version=7.0.0
+
+javac.source: 1.8
+javac.target: 1.8
+Export-Package: \
+	marco.search.query,\
+	marco.search.index
+Bundle-Name: Marco E-Commerce Search API
+Bundle-Description: Describes an API to handle document indexing and querying. Requests and \
+	Responses can be intercepted.

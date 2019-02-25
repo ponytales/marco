@@ -1,0 +1,25 @@
+-buildpath: \
+	osgi.annotation;version=7.0.0,\
+	osgi.core;version=7.0.0,\
+	osgi.cmpn;version=7.0.0,\
+	marco.search.api;version=latest,\
+	org.apache.servicemix.bundles:org.apache.servicemix.bundles.solr-solrj
+
+-testpath: \
+	${junit},\
+	${mockito},\
+	${mockito-deps}
+
+javac.source: 1.8
+javac.target: 1.8
+
+Bundle-Version: 0.0.0.${tstamp}
+Bundle-Blueprint: 
+Include-Resource: OSGI-INF/blueprint/blueprint.xml=resources/blueprint.xml
+Export-Package: \
+	marco.search.index,\
+	marco.search.query
+Private-Package: marco.search.solr.impl
+Import-Package: \
+	org.apache.solr.client.solrj.impl,\
+	*
