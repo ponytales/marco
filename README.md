@@ -1,4 +1,4 @@
-# PonyTales E-Commerce Backend
+# Marco E-Commerce Backend
 
 A simple yet generic ecommerce backend built on top of the OSGi specifications. It provides APIs
 as well as some implementations. For testing purposes a restful resources are included as well
@@ -6,12 +6,25 @@ as well as some implementations. For testing purposes a restful resources are in
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. To build the project simply do
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+**All following commands are meant to be run from the project's root dir.**
+
+First we have to make it a valid bnd workspace, by adding a build.bnd:
+
+```
+touch cnf/build.bnd
+```
+
+I decided to remove it from my repository, so you can place your personal settings in it (as intend by bnd). It is also possible to place additional configurations into `cnf/ext/*_local*.bnd` files. These files are part of git's ignore list.
+
+Afterwards you can build it by doing a
 
 ```
 gradle clean
 ```
-in the projects root directory followed by a
+
+followed by a
 
 ```
 gradle build
