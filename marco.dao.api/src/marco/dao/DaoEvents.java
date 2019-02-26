@@ -25,6 +25,26 @@ public interface DaoEvents {
 	String CATEGORY_ID = "category_id";
 	String CATEGORY_SLUG = "category_slug";
 
+	String CART_TOPIC = TOPIC + "cart/";
+	String CART_ALL =  CART_TOPIC + "*";
+	String CART_PRE_PERSIST = CART_TOPIC + "pre_persist";
+	String CART_POST_PERSIST = CART_TOPIC + "post_persist";
+	String CART_PRE_UPDATE = CART_TOPIC + "pre_update";
+	String CART_POST_UPDATE = CART_TOPIC + "post_update";
+	String CART_PRE_REMOVE = CART_TOPIC + "pre_remove";
+	String CART_POST_REMOVE = CART_TOPIC + "post_remove";
+	String CART_ID = "cart_id";
+
+	String POSITION_TOPIC = TOPIC + "positions/";
+	String POSITION_ALL =  POSITION_TOPIC + "*";
+	String POSITION_PRE_PERSIST = POSITION_TOPIC + "pre_persist";
+	String POSITION_POST_PERSIST = POSITION_TOPIC + "post_persist";
+	String POSITION_PRE_UPDATE = POSITION_TOPIC + "pre_update";
+	String POSITION_POST_UPDATE = POSITION_TOPIC + "post_update";
+	String POSITION_PRE_REMOVE = POSITION_TOPIC + "pre_remove";
+	String POSITION_POST_REMOVE = POSITION_TOPIC + "post_remove";
+	String POSITION_ID = "positions_id";
+
 	String PROPERTY_TOPIC = TOPIC + "property/";
 	String PROPERTY_ALL = PROPERTY_TOPIC + "*";
 	String PROPERTY_PRE_PERSIST = PROPERTY_TOPIC + "pre_persist";
