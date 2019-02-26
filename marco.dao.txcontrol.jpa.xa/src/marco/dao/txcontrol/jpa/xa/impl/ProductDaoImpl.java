@@ -202,6 +202,8 @@ public class ProductDaoImpl implements ProductDao {
 				props.put(DaoEvents.ERROR, false);
 			}
 			
+			eventAdmin.sendEvent(new Event(DaoEvents.PRODUCT_POST_REMOVE, props));
+			
 			return count > 0 ? true : false;
 		} catch (Exception e) {
 			props.put(DaoEvents.ERROR, true);
