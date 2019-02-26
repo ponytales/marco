@@ -6,6 +6,7 @@ import java.util.List;
 import org.osgi.dto.DTO;
 
 public class CartDTO extends DTO {
+	public Long id;
 	public String session;
 	public List<PositionDTO> positions = new ArrayList<>();
 }
