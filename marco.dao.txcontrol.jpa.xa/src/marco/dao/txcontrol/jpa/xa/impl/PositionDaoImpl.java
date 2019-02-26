@@ -35,7 +35,7 @@ public class PositionDaoImpl implements PositionDao {
 	
 	@Reference
 	private TransactionControl txControl;
-	
+
 	@Reference(target="(osgi.unit.name=marco.dao.txcontrol.jpa.xa-pu)")
 	private JPAEntityManagerProvider provider;
 	

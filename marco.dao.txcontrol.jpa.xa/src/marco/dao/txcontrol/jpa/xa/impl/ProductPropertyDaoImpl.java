@@ -57,7 +57,7 @@ public class ProductPropertyDaoImpl implements ProductPropertyDao {
      * This target filter must select the persistence unit defined by
      * the persistence.xml in this bundle
      */
-    @Reference(target="(osgi.unit.name=dev.persistence.jpa.xa-pu)")
+	@Reference(target="(osgi.unit.name=marco.dao.txcontrol.jpa.xa-pu)")
     JPAEntityManagerProvider jpaEntityManagerProvider;
 
     EntityManager em;

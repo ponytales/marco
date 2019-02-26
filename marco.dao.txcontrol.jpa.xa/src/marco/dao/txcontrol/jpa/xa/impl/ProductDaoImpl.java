@@ -42,8 +42,8 @@ public class ProductDaoImpl implements ProductDao {
 	
 	@Reference
 	private TransactionControl txControl;
-	
-	@Reference(target="(osgi.unit.name=dev.persistence.jpa.xa-pu)")
+
+	@Reference(target="(osgi.unit.name=marco.dao.txcontrol.jpa.xa-pu)")
 	private JPAEntityManagerProvider provider;
 	
 	private EntityManager em;
