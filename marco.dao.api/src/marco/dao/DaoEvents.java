@@ -35,6 +35,8 @@ public interface DaoEvents {
 	String CART_POST_REMOVE = CART_TOPIC + "post_remove";
 	String CART_ID = "cart_id";
 
+	String CART_SESSION = "cart_session";
+
 	String POSITION_TOPIC = TOPIC + "positions/";
 	String POSITION_ALL =  POSITION_TOPIC + "*";
 	String POSITION_PRE_PERSIST = POSITION_TOPIC + "pre_persist";
